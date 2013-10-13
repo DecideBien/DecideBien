@@ -1,0 +1,85 @@
+/* Put your custom CSS here */
+
+div.ui-header div.back{
+	float:left; 
+	left: 0px;
+	position:absolute; 
+	background-color: transparent;
+	height: 42px;
+	margin-top: -43px;
+	width: 44px;
+	border-right: 1px solid #87b526;
+	background-image: url(img/back.png);
+	padding-bottom: 1px;
+}
+div.ui-header div.back:active{
+	background-color: #6b2d87;
+}
+div#page1 div.ui-content div#pgpaso1 div#btnuni{
+	height: 80px;
+	background: url(img/universidad.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso1 div#btnuni:active{
+	background: url(img/universidad2.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso1 div#btnip{
+	height: 80px;
+	background: url(img/instituto-profesional.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso1 div#btnip:active{
+	background: url(img/instituto-profesional2.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso1 div#btncft{
+	height: 80px;
+	background: url(img/cft.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso1 div#btncft:active{
+	background: url(img/cft2.png) no-repeat fixed center;
+}
+div#page1 div.ui-content div#pgpaso3 ul li{
+	height: 50px;
+	padding-bottom: 0;
+}
+div#page1 div.ui-content div#pgpaso3 ul li div.listatop{
+        background: #336633;
+        height: 25px;
+        width: calc(100% - 100px);
+        float: left;
+        -webkit-transform: skew(30deg);
+             -o-transform: skew(30deg);
+}
+div#page1 div.ui-content div#pgpaso3 ul li div.listabottom {
+        background: #336633;
+        height: 25px;
+        width: calc(100% - 100px);
+        float: left;
+        -webkit-transform: skew(-30deg);
+           -moz-transform: skew(-30deg);
+             -o-transform: skew(-30deg);
+}
+div#page1 div.ui-content div#pgpaso3 ul li div.listatoph{
+        background: #006600;
+        height: 25px;
+        width: 100px;
+        float: left;
+        -webkit-transform: skew(30deg);
+             -o-transform: skew(30deg);
+}
+div#page1 div.ui-content div#pgpaso3 ul li div.listabottomh {
+        background: #006600;
+        height: 25px;
+        width: 100px;
+        float: left;
+        -webkit-transform: skew(-30deg);
+           -moz-transform: skew(-30deg);
+             -o-transform: skew(-30deg);
+}
+div#page1 div.ui-content div#pgpaso3 ul li div.listatext{
+	color: white;
+	margin-top: 9px;
+	margin-left: 10px;
+	text-align: center;
+    width: calc(100% - 150px);
+	position: absolute;
+	font-weight:normal;
+}
