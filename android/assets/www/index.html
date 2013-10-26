@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  
+  <!--
+  Morado: 6b2d87
+Naranja: f37121
+-->
+  
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
+  
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="css/codiqa.ext.css">
+  <link rel="stylesheet" media="screen" href="css/common.css" />
+
+  <!-- Extra Codiqa features -->
+  <!--script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script-->
+   
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header" data-position="fixed">
+        <h3>
+            Decide Bien
+        </h3>
+        <div class="back" id="divback" style="display:none;" onclick="volver();"><a href="#" data-rel="back"></a>
+        </div>
+    </div>
+    <div data-role="content">
+      <!--inicio paso 1: primer filtro, centro de estudio-->
+      <div id="pgpaso1" style="text-align: center;">
+        <div id="btnuni" onclick="listarareas(1);"></div>
+        <div id="btnip" onclick="listarareas(2);"></div>
+        <div id="btncft" onclick="listarareas(3);"></div>
+      </div>
+      <!--inicio paso 2: segundo filtro, area y region-->
+      <div id="pgpaso2" style="display:none;">
+        <div data-role="fieldcontain">
+            <label for="selectmenu1">
+                Área
+            </label>
+            <select id="selectmenu1" name="">
+                <option value="option1">
+                    Ingenieria
+                </option>
+                <option value="value">
+                    Salud
+                </option>
+                <option value="value">
+                    Economía
+                </option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="selectmenu1">
+                Carrera
+            </label>
+            <select id="selectmenu2" name="">
+                <option value="option1">
+                    Electrónica
+                </option>
+                <option value="value">
+                    Informática
+                </option>
+                <option value="value">
+                    Agrónoma
+                </option>
+            </select>
+        </div>
+        <div id="btnconsultar" onclick="listarUniversidades();"></div>
+      </div>
+      <!--inicio paso 3: lista de opciones carrera - universidad-->
+      <div id="pgpaso3" style="display:none;">
+        <ul data-role="listview" data-divider-theme="b" data-inset="true" id="uluniversidades">
+        </ul>
+      </div>
+      <!--inicio paso 4: ver estadísticas-->
+      <div id="pgpaso4" style="display:none;">
+        <div data-role="content" style="padding:0;margin: -15px;">
+<div class = 'container'>
+      <div class = 'iosSlider' id="iosslider">
+        <div class = 'slider'>
+          <div class = 'item'>
+            <div class="itembody" style="background-color: #feffd7;">
+              <canvas id="canvas1" width="400" height="600" style="display:none;">
+              </canvas>
+                <img id="canvasimg1" alt="Right click to save me!" style="height: 100%;width: auto;" src="css/img/contrato-tipo-grafiscopio-2-05.jpg"/>
+            </div>
+          </div>
+          <div class = 'item'>
+            <div class="itembody" style="background-color: #feffd7;">
+              <canvas id="canvas2" width="400" height="600" style="display:none;">
+              </canvas>
+                <img id="canvasimg2" alt="Right click to save me!" style="height: 100%;width: auto;" src="css/img/contrato-tipo-grafiscopio-2-06.jpg"/>
+            </div>
+          </div>
+          <div class = 'item'>
+            <div class="itembody" style="background-color: #ffccd5;">
+              <canvas id="canvas3" width="400" height="600" style="display:none;">
+              </canvas>
+                <img id="canvasimg3" alt="Right click to save me!" style="height: 100%;width: auto;" src="css/img/contrato-tipo-grafiscopio-2-07.jpg"/>
+            </div>
+          </div>
+          <div class = 'item'>
+            <div class="itembody" style="background-color: #feffd7;">
+              <canvas id="canvas4" width="400" height="600" style="display:none;">
+              </canvas>
+                <img id="canvasimg4" alt="Right click to save me!" style="height: 100%;width: auto;" src="css/img/contrato-tipo-grafiscopio-2-08.jpg"/>
+            </div>
+          </div>
+          <div class = 'item'>
+            <div class="itembody" style="background-color: #feffd7;">
+              <canvas id="canvas" width="391" height="533" style="display:none;">
+              </canvas>
+                <img id="canvasimg" alt="Right click to save me!" style="height: 100%;width: auto;" src="css/img/infografia.jpg"/>
+                <a href="#" data-role="button" onclick="uploadimg();">Compartir</a>
+            </div>
+          </div>
+        </div>
+        <div class = 'selectorsBlock'>
+          <div class = 'selectors'>
+            <div class = 'item first selected'><div id="btnacre"></div></div>
+            <div class = 'item'><span><div id="btnemp"></div></span></div>
+            <div class = 'item'><span><div id="btndes"></div></span></div>
+            <div class = 'item'><span><div id="btnbeca"></div></span></div>
+            <div class = 'item'><div id="btnmas"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+  <script src="cdv-plugin-fb-connect.js"></script>
+  <!-- facebook js sdk -->
+  <script src="facebook_js_sdk.js"></script> 
+  
+  <!--<script src="js/_config.js"></script>-->
+  <!--script src="js/ui.js"></script-->
+  <script src="js/auth.js"></script>
+  <script src="js/feed.js"></script>
+  <script src="js/graph_api.js"></script>
+  <script src="js/requests.js"></script>
+  <!-- jQuery and jQuery Mobile -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+  <script src="js/jquery.mobile-1.3.2.js"></script>
+  <script src="js/jquery.easing-1.3.js"></script>
+  <script src="js/jquery.iosslider.js"></script>
+  <script src="js/sql_db.js"></script>
+  <script src="js/codiqa.ext.js"></script>
+        <script type="text/javascript">
+          $.mobile.page.prototype.options.addBackBtn = false;
+          document.addEventListener("backbutton", onBackKeyDown, false);
+            //app.initialize();
+        </script>
+</body>
+</html>

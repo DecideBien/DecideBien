@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/codiqa.ext.css">
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body onload="onloaded()">probando no más
+    <canvas id="canvas" width="400" height="600"></canvas>
+
+    <img id="canvasimg" alt="Right click to save me!"/>
+  </body>
+
+  <script type="text/javascript">
+      var c = document.getElementById('canvas');
+      var context = c.getContext('2d');
+      var backgroundImage = new Image();
+      var img = {
+        tick:new Image(),
+        tickno:new Image(),
+        checkn:new Image(),
+        checknno:new Image(),
+        sem3:new Image(),
+        sem6:new Image(),
+        sem10:new Image()
+      }
+
+      backgroundImage.onload = function() {
+          // Once the image has finished loading, draw the 
+          // image and then the text.
+          DrawScreen();
+          //setTimeout(DrawText, 1000);
+          DrawText();
+          makeimg();
+        };
+      backgroundImage.src = "css/img/contrato-tipo-grafiscopio-2-08.jpg";
+      img.tick.src = "css/img/tick.png";
+      img.tickno.src = "css/img/tickno.png";
+      img.checkn.src = "css/img/checkn.png";
+      img.checknno.src = "css/img/checknno.png";
+      img.sem3.src = "css/img/sem3.png";
+      img.sem6.src = "css/img/sem6.png";
+      img.sem10.src = "css/img/sem10.png";
+      //imganoacred.src = "css/img/anos-de-acreditacion.png";
+
+      function DrawScreen() {
+          context.drawImage(backgroundImage, 0, 0);
+          /*context.drawImage(img.tick, 90, 260, 60,60);
+          context.drawImage(img.tick, 140, 260, 60,60);
+          context.drawImage(img.tick, 190, 260, 60,60);
+          context.drawImage(img.tick, 240, 260, 60,60);
+          context.drawImage(img.tickno, 115, 300, 60,60);
+          context.drawImage(img.tickno, 165, 300, 60,60);
+          context.drawImage(img.tickno, 215, 300, 60,60);
+          context.drawImage(img.checkn, 90, 420, 60,60);
+          context.drawImage(img.checkn, 140, 420, 60,60);
+          context.drawImage(img.checkn, 190, 420, 60,60);
+          context.drawImage(img.checkn, 240, 420, 60,60);
+          context.drawImage(img.checknno, 115, 480, 60,60);
+          context.drawImage(img.checknno, 165, 480, 60,60);
+          context.drawImage(img.checknno, 215, 480, 60,60);*/
+          var lastend = 0;
+          var data = [80,10,10];
+          var myTotal = 0;
+          var myColor = ['#ff9934','#1d7f2a','#4d4d41'];
+
+          for(var e = 0; e < data.length; e++)
+          {
+            myTotal += data[e];
+          }
+
+          for (var i = 0; i < data.length; i++) {
+            context.fillStyle = myColor[i];
+            context.beginPath();
+            context.moveTo(270,480);
+            context.arc(270,480,100,lastend,lastend+(Math.PI*2*(data[i]/myTotal)),false);
+            context.lineTo(270,480);
+            context.fill();
+            lastend += Math.PI*2*(data[i]/myTotal);
+          }
+      }
+
+      function DrawText() {
+          context.textAlign = 'center';
+          context.textBaseline = 'top';
+          context.fillStyle = "white";
+          context.font = "italic 26px arial";
+          context.fillText("U. Católica", 200, 20);
+          context.font = "italic 22px arial";
+          context.fillText("Ing. en Ciencias y Sistemas", 200, 60);
+          context.font = "italic bold 30px arial";
+          context.fillText("$3000000", 200, 255);
+          context.font = "italic 24px arial";
+          context.fillText("ARANCEL ANUAL", 200, 290);
+          context.fillStyle = "black";
+          context.font = "italic 50px arial";
+          context.fillText("20.4%", 90, 165);
+          context.font = "italic 20px arial";
+          context.textAlign = 'left';
+          context.fillText("Municipal", 50, 430);
+          context.fillText("Subvención", 50, 485);
+          context.fillText("Particular", 50, 540);
+      }
+      function makeimg(){
+        var dataURL = c.toDataURL();
+        console.log(c.toDataURL());
+        document.getElementById('canvasimg').src = dataURL;
+      }
+
+    </script>
+</html>
+

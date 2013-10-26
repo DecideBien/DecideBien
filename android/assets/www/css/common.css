@@ -1,0 +1,154 @@
+.container {
+	/* defaults for resposive height container */
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	/* 39% being the ratio we are maintaining 
+	 * calculated by looking at the image 
+	 * ratio: 400/1024 = ~0.39 */
+	padding: 0;
+}
+
+.iosSlider {
+	width: 100%;
+	
+	/* this height ends up being your maximum height, 
+	 * if you want it to scale forever, set it to 
+	 * a very high number */
+	height: 100%;
+}
+
+.iosSlider .slider {
+	width: 100%;
+	height: 100%;
+}
+
+.iosSlider .slider .item {
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+
+.iosSlider .slider .item .itembody {
+	text-align: center;
+	height: 65%;
+}
+.iosSlider .slider .item img {
+	width: 100%;
+	height: auto;
+}
+
+/* controls */
+.container .prevContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	
+	padding: 0 0 19.5% 0;
+	z-index: 10;
+}
+
+.container .prevContainer .prev {
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background: #aaa;
+}
+
+.container .nextContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	
+	padding: 0 0 19.5% 0;
+	z-index: 10;
+}
+
+.container .nextContainer .next {
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background: #aaa;
+}
+
+.container .selectorsBlock {
+	position: absolute;
+bottom: 0px;
+width: 100%;
+height: 80px;
+}
+
+.container .selectorsBlock .selectors {
+	position: relative;
+top: 0;
+left: 0;
+margin: 0 auto;
+width: 100%;
+height: 100%;
+}
+
+.container .selectorsBlock .selectors .item {
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 19%;
+	height: 100%;
+	margin: 0 0 0 1%;
+	background: #fff;
+}
+
+.container .selectorsBlock .selectors .selected {
+	background: #000;
+}
+.container .selectorsBlock .selectors .item div#btnacre{
+	width: 100%;
+	height: 100%;
+    background: url(img/btnacre.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .selected div#btnacre{
+    background: url(img/btnacre2.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .item div#btnemp{
+	width: 100%;
+	height: 100%;
+    background: url(img/btnemp.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .selected div#btnemp{
+    background: url(img/btnemp2.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .item div#btndes{
+	width: 100%;
+	height: 100%;
+    background: url(img/btndes.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .selected div#btndes{
+    background: url(img/btndes2.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .item div#btnbeca{
+	width: 100%;
+	height: 100%;
+    background: url(img/btnbeca.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .selected div#btnbeca{
+    background: url(img/btnbeca2.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .item div#btnmas{
+	width: 100%;
+	height: 100%;
+    background: url(img/mas.png) no-repeat center;
+}
+.container .selectorsBlock .selectors .selected div#btnmas{
+    background: url(img/mas2.png) no-repeat center;
+}
+
+.container .selectorsBlock .selectors .first {
+	margin-left: 0;
+}
