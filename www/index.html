@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  
+  <!--
+  Morado: 6b2d87
+Naranja: f37121
+-->
+  
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
+  
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="css/codiqa.ext.css">
+
+  <!-- Extra Codiqa features -->
+  <!--script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script-->
+   
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header" data-position="fixed">
+        <h3>
+            EduInf
+        </h3>
+        <div class="back" id="divback" style="display:none;" onclick="volver();"><a href="#" data-rel="back"></a>
+        </div>
+    </div>
+    <div data-role="content">
+      <!--inicio paso 1: primer filtro, centro de estudio-->
+      <div id="pgpaso1" style="text-align: center;">
+        <img src="css/img/universidad.png" onclick="navegar(2);"/><br>
+        <img src="css/img/instituto-profesional.png" onclick="navegar(2);"/><br>
+        <img src="css/img/cft.png" onclick="navegar(2);"/>
+      </div>
+      <!--inicio paso 2: segundo filtro, area y region-->
+      <div id="pgpaso2" style="display:none;">
+        <div data-role="fieldcontain">
+            <label for="selectmenu1">
+                Área
+            </label>
+            <select id="selectmenu1" name="">
+                <option value="option1">
+                    Ingenieria
+                </option>
+                <option value="value">
+                    Salud
+                </option>
+                <option value="value">
+                    Economía
+                </option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="selectmenu1">
+                Carrera
+            </label>
+            <select id="selectmenu1" name="">
+                <option value="option1">
+                    Electrónica
+                </option>
+                <option value="value">
+                    Informática
+                </option>
+                <option value="value">
+                    Agrónoma
+                </option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="selectmenu1">
+                Region
+            </label>
+            <select id="selectmenu1" name="">
+                <option value="option1">
+                    Metropolitana
+                </option>
+                <option value="value">
+                    Araucanía
+                </option>
+                <option value="value">
+                    Temuco
+                </option>
+            </select>
+        </div>
+        <a data-role="button" onclick="navegar(3);">
+            Consultar
+        </a>
+      </div>
+      <!--inicio paso 3: lista de opciones carrera - universidad-->
+      <div id="pgpaso3" style="display:none;">
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-role="list-divider" role="heading" onclick="navegar(4, false);">
+                Divider
+            </li>
+            <li data-theme="c" onclick="navegar(4);">
+              <div class="listatop"></div>
+              <div class="listatoph"></div>
+              <div class="listabottom"></div>
+              <div class="listabottomh"></div>
+              <div class="listatext">
+                Universidad de Chile<br>
+                <span style="font-size: 10px;">Salario promedio $100,000</span>
+              </div>
+            </li>
+            <li data-theme="c" onclick="navegar(4);">
+              <div class="listatop"></div>
+              <div class="listatoph"></div>
+              <div class="listabottom"></div>
+              <div class="listabottomh"></div>
+              <div class="listatext">
+                Universidad Católica<br>
+                <span style="font-size: 10px;">Salario promedio $300,000</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <!--inicio paso 4: ver estadísticas-->
+      <div id="pgpaso4" style="display:none;">
+        <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a data-transition="fade" data-theme="" data-icon="" class="ui-btn-active">
+                        Acreditación
+                    </a>
+                </li>
+                <li>
+                    <a data-transition="fade" data-theme="" data-icon="">
+                        Empleabilidad
+                    </a>
+                </li>
+                <li>
+                    <a data-transition="fade" data-theme="" data-icon="">
+                        Deserción
+                    </a>
+                </li>
+                <li>
+                    <a data-transition="fade" data-theme="" data-icon="">
+                        Becas y fondos
+                    </a>
+                </li>
+                <li>
+                    <a data-transition="fade" data-theme="" data-icon="">
+                        Infografía
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+      </div>
+    </div>
+    
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
+  <!-- jQuery and jQuery Mobile -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+  <script src="js/jquery.mobile-1.3.2.js"></script>
+  <script src="js/codiqa.ext.js"></script>
+        <script type="text/javascript">
+            //app.initialize();
+        </script>
+</body>
+</html>
